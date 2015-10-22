@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: MTV-B; /* Имя шрифта */
+	src: url(mtv-bold.ttf); /* Путь к файлу со шрифтом */
+}
+body{
+	background: #1E0E00;
+	color: #fff;
+	font-family: MTV-B;
+}
+#login_form{
+	perspective: 300;
+	-webkit-perspective: 300px;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	height: 400px;
+	width: 900px;
+	margin-top: -200px;
+	margin-left: -450px;
+}
+#login_form button[type=submit]{
+	background: maroon;
+	border: none;
+	position: absolute;
+	width: 300px;
+	height: 100px;
+	top: 110px;
+	left: 600px;
+}
+#login_form input{
+	border: none;
+	position: absolute;
+	width: 299px;
+	height: 100px;
+	text-align: center;
+	color: #444;
+}
+#login_form label{
+	position: absolute;
+	width: 299px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	background: #22283A; /* Old browsers */
+	background: -moz-linear-gradient(top,  #22283A 0%, #1e0e00 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#22283A), color-stop(100%,#1e0e00)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #22283A 0%,#1e0e00 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #22283A 0%,#1e0e00 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #22283A 0%,#1e0e00 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #22283A 0%,#1e0e00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22283A', endColorstr='#1e0e00',GradientType=0 ); /* IE6-9 */
+
+}
+#login_form #password{
+	left: 300px;
+	top: 110px;
+	background: #fff;
+}
+#login_form #username{
+	left: 0;
+	top: 110px;
+	background: #fff;
+}
+#error_mess{
+	color: red;
+}
+#login_form label[for=password]{
+	left: 300px;
+}

@@ -1,0 +1,31 @@
+services:
+    sonata.admin.songs:
+        class: App\PlayListBundle\Admin\SongsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Songs Archive", label: "Songs" }
+        arguments:
+            - ~
+            - App\PlayListBundle\Entity\Songs
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppPlayListBundle]]
+#    sonata.admin.categories:
+#        class: App\PlayListBundle\Admin\CategoriesAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Tasks", label: "Categories" }
+#        arguments:
+#            - ~
+#            - App\PlayListBundle\Entity\Categories
+#            - ~
+#        calls:
+#            - [ setTranslationDomain, [AppPlayListBundle]]
+#    sonata.admin.tasks:
+#        class: App\PlayListBundle\Admin\TasksAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Tasks", label: "Tasks" }
+#        arguments:
+#            - ~
+#            - App\PlayListBundle\Entity\Tasks
+#            - ~
+#        calls:
+#           - [ setTranslationDomain, [AppPlayListBundle]]

@@ -1,0 +1,115 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    <link rel="stylesheet" href="{{ asset('/css/playlist_controller.css') }}" type="text/css" media="all">
+    {% for group in groups %}
+        {% set display = (group.roles is empty or is_granted('ROLE_SUPER_ADMIN') ) %}
+        {% for role in group.roles if not display %}
+            {% set display = is_granted(role)%}
+        {% endfor %}
+
+        {% if display %}
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">{{ group.label|trans({}, group.label_catalogue) }}</h3>
+                </div>
+                <div class="box-body">
+                    <table class="table table-hover">
+                        <tbody>
+                            {% for admin in group.items %}
+                                {% if admin.hasroute('create') and admin.isGranted('CREATE') or admin.hasroute('list') and admin.isGranted('LIST') %}
+                                            <tr>
+                                                <td class="sonata-ba-list-label" width="40%">
+                                                    {{ admin.label|trans({}, admin.translationdomain) }}
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        {% if admin.hasroute('create') and admin.isGranted('CREATE') %}
+                                                            {% if admin.subClasses is empty %}
+                                                                <a class="btn btn-link btn-flat" href="{{ admin.generateUrl('create')}}">
+                                                                    <i class="fa fa-plus-circle"></i>
+                                                                    {% trans from 'SonataAdminBundle' %}link_add{% endtrans %}
+                                                                </a>
+                                                            {% else %}
+                                                                <a class="btn btn-link btn-flat dropdown-toggle" data-toggle="dropdown" href="#">
+                                                                    <i class="fa fa-plus-circle"></i>
+                                                                    {% trans from 'SonataAdminBundle' %}link_add{% endtrans %}
+                                                                    <span class="caret"></span>
+                                                                </a>
+                                                                <ul class="dropdown-menu">
+                                                                    {% for subclass in admin.subclasses|keys %}
+                                                                        <li>
+                                                                            <a href="{{ admin.generateUrl('create', {'subclass': subclass}) }}">{{ subclass }}</a>
+                                                                        </li>
+                                                                    {% endfor %}
+                                                                </ul>
+                                                            {% endif %}
+                                                        {% endif %}
+                                                        {% if admin.hasroute('list') and admin.isGranted('LIST') %}
+                                                            <a class="btn btn-link btn-flat" href="{{ admin.generateUrl('list')}}">
+                                                                <i class="glyphicon glyphicon-list"></i>
+                                                                {% trans from 'SonataAdminBundle' %}link_list{% endtrans -%}
+                                                            </a>
+                                                        {% endif %}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+	{% block playcontroller %}
+		<div class="sonata-ba-content">
+			<div class="row">
+				<div class="col-md-12">
+                    <div class="cms-block cms-block-element">
+                        
+						<div class="box">
+							<div class="box-header">
+								<h3 class="box-title">PlayList Controller</h3>
+							</div>
+							<div class="box-body">
+								<div class="row">
+									<div class="col-md-6" id="playlist"></div>
+									<div class="col-md-6">
+										<div class="btn-group" id="playlist_control_btns">
+											<a class="prev_song btn btn-default" href="#"><span class="glyphicon glyphicon-backward"></span></a>
+											<a class="stop_song btn btn-default" href="#"><span class="glyphicon glyphicon-stop"></span></a>
+											<a class="pause_song btn btn-default" href="#"><span class="glyphicon glyphicon-pause"></span></a>
+											<a class="continue_song btn btn-default" href="#"><span class="glyphicon glyphicon-play"></span></a>
+											<a class="next_song btn btn-default" href="#"><span class="glyphicon glyphicon-forward"></span></a>
+											<a class="repeat_song btn btn-default" href="#"><span class="glyphicon glyphicon-repeat"></span></a>
+											<a class="random_song btn btn-default" href="#"><span class="glyphicon glyphicon-random"></span></a>
+										</div>
+									</div>
+								</div>
+								<hr>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<link rel="stylesheet" href="{{ asset('/js/jquery-ui/jquery-ui.css')}}">
+  		<script src="{{ asset('/js/jquery-ui/jquery-ui.js')}}"></script>
+        <script src="{{ asset('/js/tinysort.js')}}"></script>
+        <script src="{{ asset('/js/jquery.tinysort.js')}}"></script>
+		<script src="{{ asset('/js/functions.js') }}"></script>
+		<script src="{{ asset('/js/playlist_controller.js') }}"></script>
+	{% endblock %}
+{% endblock %}

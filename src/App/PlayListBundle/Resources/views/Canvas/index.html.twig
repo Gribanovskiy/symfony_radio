@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block content -%}
+	<div class="radiostation">
+		<div class="song-title st12"></div>
+		<a value="Play" href="#play" class="play paused"></a>
+		<audio id="player" src="http://liferecorder.shcg.ru/music/proxy.php"></audio>
+		<div id="master"></div>
+	</div>
+	<canvas id="radio-pattern"></canvas>
+{% endblock %}
+{% block javascripts_adds -%}
+	<script src="{{ asset('bundles/appplaylist/js/canvas.js') }}"></script>
+{% endblock %}

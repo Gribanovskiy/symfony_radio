@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: MTV-B; /* Имя шрифта */
+	src: url(mtv-bold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+	font-family: PT Sans Narrow; /* Имя шрифта */
+	src: url(pt-sans-narrow.ttf); /* Путь к файлу со шрифтом */
+}
+
+	.st731
+{
+	font-family : MTV-B;
+	font-weight : bold;
+	font-size : 12px;
+	color : #000000;
+	color : rgb(0, 0, 0);
+}
+.st730
+{
+	font-family : MTV Upgrade Bold;
+	font-weight : bold;
+	font-size : 12px;
+	color : #EEEEEE;
+	color : rgb(238, 238, 238);
+}
+.st724
+{
+	font-family : MTV Upgrade Bold;
+	font-weight : bold;
+	font-size : 12px;
+	color : #EEEEEE;
+	color : rgb(238, 238, 238);
+}
+.st574
+{
+	font-family : MTV Upgrade Bold;
+	font-weight : bold;
+	font-size : 12px;
+	color : #EEEEEE;
+	color : rgb(238, 238, 238);
+}
+.st505
+{
+	font-family : MTV Upgrade Bold;
+	font-weight : bold;
+	font-size : 12px;
+	color : #000000;
+	color : rgb(0, 0, 0);
+}
+.st12
+{
+	font-family : PT Sans Narrow;
+	font-size : 17px;
+	color : #1E0E00;
+	color : rgb(30, 14, 0);
+}
+
+body{
+	overflow: hidden;
+	margin:0;
+	padding:0;
+	background: #eee;
+	transition: ease background .5s;
+}
+body.night{
+	background: #1E0E00;
+}
+#title:before{
+	display: block;
+	float: left;
+	width: 50px;
+	height: 51px;
+	background: url(../images/logo-liferecorder.png) no-repeat;
+	content: '';
+	margin-top: -16px;
+	margin-right: 10px;
+}
+#title{
+	margin-top: 35px;
+	margin-left: 70px;
+	float: left;
+}
+.night #title{
+	color: #e2e2e2;
+}
+.night #title:before{
+	background: url(../images/logo-liferecorder-night.png) no-repeat;
+}
+.radiostation{
+	height: 150px;
+	width: 300px;
+	position: fixed;
+	z-index: 1000;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -75px;
+	transition: ease .5s top;
+}
+.play{
+	display: block;
+	width: 60px;
+	height: 70px;
+	position: absolute;
+	/*background: url(../images/play-pause.png) no-repeat -73px 0px;*/
+	top: 50%;
+	left: 50%;
+	margin-left: -30px;
+	margin-top: -35px;
+	border-left: 20px solid;
+  	border-right: 20px solid;
+    border-color: #EF4941;
+}
+.play.paused{
+	/*background-position: 0px 0px;*/
+  border-right: none;
+  border-left: 70px solid #EF4941;
+  border-top: transparent 35px solid;
+  border-bottom: transparent 35px solid;
+}
+.song-title{
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.night .song-title{
+	color: #e2e2e2;
+}
+#master{
+	  width: 150px;
+	  position: absolute;
+	  bottom: 0;
+	  left: 50%;
+	  margin-left: -75px;
+}
+#master:before{
+	content: '';
+	width: 13px;
+	height: 13px;
+	float: left;
+	margin-left: -20px;
+	margin-top: -2px;
+	background: url(../images/volume.png) no-repeat 0 0;
+}
+.night #master:before{
+	background-position: -13px 0;
+}
+
+#master .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	background: url(../images/radio2.png) no-repeat -147px 1px;
+	width: 13px;
+	height: 14px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+#master .ui-widget-header{
+	background: #CAC8C8;
+}
+#master{
+	background: #5A5550;
+}
+.wrap_vis{
+	position:fixed;
+	width: 100%;
+	bottom: 35px;
+	height: 55%;
+}
+#visualyser{
+	width:50%;
+	float: left;
+	height:100%;
+}
+#visualyser2{
+	width:50%;
+	float: left;
+	height:100%;
+}
+.bar{
+	width:4%;
+	margin-left:.6%;
+	float: left;
+}
+.bar:first-child{
+	margin-left:.6px;
+}
+#visualyser2 .bar{
+	float: right;
+	margin-left: 0;
+	margin-right:.6%;
+}
+#visualyser2 .bar:first-child{
+	margin-left: 0;
+	margin-right:.6%;
+}
+.bar .color{
+	width: 100%;
+	opacity: 0;
+}
+.bar .color.c1{
+	background: url(../images/bar8.png) repeat;
+	transition: .2s ease opacity;
+}
+.bar .color.c2{
+	background: url(../images/bar7.png) repeat;
+	transition: .4s ease opacity;
+}
+.bar .color.c3{
+	background: url(../images/bar6.png) repeat;
+	transition: .6s ease opacity;
+}
+.bar .color.c4{
+	background: url(../images/bar5.png) repeat;
+	transition: .8s ease opacity;
+}
+.bar .color.c5{
+	background: url(../images/bar4.png) repeat;
+	transition: 1s ease opacity;
+}
+.bar .color.c6{
+	background: url(../images/bar3.png) repeat;
+	transition: 1.2s ease opacity;
+}
+.bar .color.c7{
+	background: url(../images/bar2.png) repeat;
+	transition: 1.4s ease opacity;
+}
+.bar .color.c8{
+	background: url(../images/bar1.png) repeat;
+	transition: 1.6s ease opacity;
+}
+#radio-pattern{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+#onoff{
+  margin-top: 35px;
+  margin-right: 70px;
+  float: right;
+  width: 49px;
+  height: 27px;
+  background: url(../images/radio2.png) no-repeat;
+  background-position: -163px 0px;
+}
+.night #onoff{
+  background-position: -162px -30px;
+}
+@media screen and (max-width: 1000px) {
+	#visualyser2{
+		display: none;
+	}
+	#visualyser{
+		width: 100%;
+		margin-left: 14%;
+	}
+}

@@ -1,0 +1,345 @@
+{% extends '::base.html.twig' %}
+{% block css_adds %}
+<link rel="stylesheet" href="{{ asset('bundles/appplaylist/css/main.css') }}" type="text/css" media="all">
+{% endblock %}
+{% block content -%}
+    <div id="title">life recorder</div>
+    <a href="#" id="onoff"></a>
+	<div class="radiostation">
+		<div class="song-title st12"></div>
+		<a value="Play" href="#play" class="play paused"></a>
+		<!--<audio id="player" src="http://liferecorder.shcg.ru:8000/mpd.ogg"></audio>-->
+		<audio id="player" src="http://liferecorder.shcg.ru/music/proxy.php"></audio>
+		<div id="master"></div>
+	</div>
+	<div class="wrap_vis">
+		<div id="visualyser2">
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+		</div>
+		<div id="visualyser">
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+			<div class="bar">
+				<div class="color c1"></div>
+				<div class="color c2"></div>
+				<div class="color c3"></div>
+				<div class="color c4"></div>
+				<div class="color c5"></div>
+				<div class="color c6"></div>
+				<div class="color c7"></div>
+				<div class="color c8"></div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block javascripts_adds %}
+<script src="{{ asset('/js/functions.js') }}"></script>
+<script src="{{ asset('bundles/appplaylist/js/main.js') }}"></script>
+{% endblock %}

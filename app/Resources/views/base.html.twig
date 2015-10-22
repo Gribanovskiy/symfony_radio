@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Liferecorder Online{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" type="text/css" media="all">
+        <link rel="stylesheet" href="{{ asset('bundles/appplaylist/js/jquery-ui/jquery-ui.min.css') }}" type="text/css" media="all">
+    {% endblock %}
+    {% block css_adds %}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('bundles/appplaylist/images/fav-liferecorder.ico') }}" />
+</head>
+<body>
+    <div class="content st731">
+        {% block content %}{% endblock %}
+        {% block login %}{% endblock %}
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('/js/jquery.js') }}"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r57/three.min.js"></script>
+        <script src="http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js"></script>
+        <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/appplaylist/js/jquery-ui/jquery-ui.min.js') }}"></script>
+    {% endblock %}
+	{% block javascripts_adds %}
+	{% endblock %}
+</body>
+</html>

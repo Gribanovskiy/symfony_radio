@@ -1,0 +1,31 @@
+#app_play_list_app_songs:
+ #   resource: "@AppPlayListBundle/Resources/config/routing/songs.yml"
+  #  prefix:   /app_songs
+
+#app_play_list_app_authors:
+ #   resource: "@AppPlayListBundle/Resources/config/routing/authors.yml"
+  #  prefix:   /app_authors
+
+app_play_list_homepage:
+    path:    /
+    defaults: { _controller: "AppPlayListBundle:MonoPage:index" }
+app_play_list_canvas:
+    path:    /canvas
+    defaults: { _controller: "AppPlayListBundle:Canvas:index" }
+app_play_list_game:
+    path:    /game
+    defaults: { _controller: "AppPlayListBundle:Game:index" }
+login:
+  pattern:   /login
+  defaults:  { _controller: AppPlayListBundle:Default:login }
+login_check:
+  pattern:   /login_check
+logout:
+   pattern: /logout
+ajax_admin:
+   pattern: /ajax/{action}/{value}
+   defaults:  { _controller: AppPlayListBundle:Ajax:index }
+   requirements:
+        action:  \w+
+        value:  \w+|\d+
+

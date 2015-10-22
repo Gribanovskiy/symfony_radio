@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block content -%}
+	<canvas id="canvas" width="960" height="600"></canvas>
+{% endblock %}
+{% block javascripts_adds -%}
+	<script src="{{ asset('bundles/appplaylist/js/box2d.min.js') }}"></script>
+	<script src="{{ asset('bundles/appplaylist/js/game.js') }}"></script>
+{% endblock %}

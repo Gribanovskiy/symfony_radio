@@ -1,0 +1,20 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    <div class="row">
+    	<div class="col-md-6"><h3>Активный плей-лист:</h3></div>
+    	<div class="col-md-6"><h3>Файлы: <button class="btn btn-warning updateMPDDB">обновить</button></h3></div>
+    </div>
+    <div class="row playlists">
+	    <div id="active_playlist" oncontextmenu="return false;" class="col-md-6"></div>
+	    <div id="tracks" class="col-md-6"></div>
+    </div>
+    <div class="row structures">
+    	<div class="col-md-6"><h3>Доступные плей-листы</h3></div>
+    	<div class="col-md-6"><h3>Каталоги треков <button class="btn btn-warning updateMPDDB">В начало</button></h3></div>
+    </div>
+	<div class="row structures">
+    	<div id="saved_playlists" class="col-md-6"></div>
+    	<div id="dirs" class="col-md-6"></div>
+    </div>
+{% endblock %}

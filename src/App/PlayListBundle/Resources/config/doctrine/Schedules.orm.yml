@@ -1,0 +1,15 @@
+App\PlayListBundle\Entity\Schedules:
+    type: entity
+    repositoryClass: App\PlayListBundle\Repository\SchedulesRepository
+    table: Schedules
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: true
+        start_at:
+            type: time

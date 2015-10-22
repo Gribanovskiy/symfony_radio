@@ -1,0 +1,7 @@
+Acme\BlogBundle\Entity\Author:
+    properties:
+        file:
+            - File:
+                maxSize: 20000k
+                mimeTypes: [audio/mp3]
+                mimeTypesMessage: Please upload a valid PDF
